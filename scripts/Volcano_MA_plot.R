@@ -35,7 +35,7 @@ final_table[final_table$p_value < 0.05,]$sig <- "sig"
 final_table$logRNAc <-final_table$mean_TPM
 
 final_table <- cbind(final_table,rownames(final_table))
-colnames(final_table)[14] <- "Name"
+colnames(final_table)[length(final_table)] <- "Name"
 label <- "ENSG00000149554"
 
 #Volcano plot
